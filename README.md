@@ -2,4 +2,4 @@
 
 **Authors:** Andrea Murphy and Mohamed Ali Metwally
 
-[ Powered by Amazon DynamoDB ](https://aws.amazon.com/dynamodb.com)
+[ Powered by Amazon DynamoDB ](https://aws.amazon.com/dynamodb/)
