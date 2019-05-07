@@ -1,0 +1,23 @@
+gremlin> v1 = g.addV("RFC 1918").property(id, 1).property("name", "Address Allocation for Private Internets").next()
+==>v[1]
+
+gremlin> v2 = g.addV("Docs").property(id, 2).property("name",
+"IETF Documents").property("Link", "https://tools.ietf.org/html/").next()
+==>v[2]
+
+gremlin>  v3 = g.addV("Tracker").property(id, 3).property("name",
+"Data Tracker").property("Link", " https://datatracker.ietf.org/doc/rfc1918/")next()
+==>v[3]
+
+gremlin>  v4 = g.addV("Errata").property(id, 4).property("name",
+"RFC Editor").property("Link", " https://www.rfc-editor.org/errata_search.php?rfc=1918").next()
+==>v[4]
+
+gremlin> g.addE("Link").from(v1).to(v2).property(id, 5).property(“weight”, 0.4)
+==>e[9][2-Link->2]
+
+gremlin> g.addE("Link").from(v1).to(v3).property(id, 10)
+==>e[10][2-Link->2]
+
+gremlin> g.addE("Link").from(v1).to(v3).property(id, 11)
+==>e[11][2-Link->2]
